@@ -1,4 +1,4 @@
-# CamGen_PQC — Post-Quantum Cryptography for V2X Communications
+# PQC-CAM-Generator : Post-Quantum V2X Cooperative Awareness Messages
 
 **CamGen_PQC** is a research project that integrates **Post-Quantum Cryptography (PQC)** into **V2X (Vehicle-to-Everything)** communication security. It extends the standard ETSI ITS message generation and certificate infrastructure to support **CRYSTALS-Dilithium** digital signatures alongside classical ECDSA, providing a migration path toward quantum-resistant vehicular networks.
 
@@ -122,7 +122,7 @@ Performance measured on **Intel Core i7-8565U**, 2000 rounds each:
 
 ### Docker Setup
 
-The project is designed to run inside the pre-built Docker image:
+The project is designed to run inside the pre-built Docker image, available on [Docker Hub](https://hub.docker.com/repository/docker/matteopedone/cybersec_camgen/general):
 
 ```bash
 # Pull the image
@@ -292,5 +292,5 @@ The original code (certificate generator extensions, PQC integration layer, benc
 ## Author
 
 **Matteo Pedone** — Master's Thesis in Computer Engineering, Politecnico di Torino  
-Supervisors: Prof. Fulvio Valenza, Eng. Leonardo De Candia  
+Supervisors: Eng. Leonardo De Candia, Prof. Fulvio Valenza
 In collaboration with *Nardò Technical Center — Porsche Engineering*
