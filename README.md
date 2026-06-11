@@ -40,7 +40,7 @@ asn1c → liboqs → itscertgen → fsmsggen
 | **liboqs** | Open Quantum Safe library providing PQC algorithm implementations. Pre-built for Dilithium-2. | `build/lib/liboqs.a`, `build/include/oqs/` |
 | **asn1c** | FilLabs fork of the ASN.1-to-C compiler. Generates codec for `DilithiumKey`, `DilithiumSignature`, and ITS message types. | Pre-built in-tree |
 | **TS.ITS** | ETSI ITS test suite — provides certificate profiles (`.xer` templates). | `data/profiles/` |
-
+ 
 ### PQC Integration Points
 
 - **ASN.1 types**: `DilithiumKey` (1312-byte OCTET STRING) and `DilithiumSignature` (2420-byte OCTET STRING) added as choices in `PublicVerificationKey` and `Signature`.
