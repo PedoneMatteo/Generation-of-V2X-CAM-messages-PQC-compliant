@@ -291,6 +291,8 @@ The original code (certificate generator extensions, PQC integration layer, benc
 
 ## Author
 
-**Matteo Pedone** — Master's Thesis in Computer Engineering, Politecnico di Torino  
+**Matteo Pedone** — Master's Thesis in Computer Engineering, Politecnico di Torino
+
 Supervisors: Eng. Leonardo De Candia, Prof. Fulvio Valenza
-In collaboration with *Nardò Technical Center — Porsche Engineering*
+
+In collaboration with **Nardò Technical Center — Porsche Engineering**
