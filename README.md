@@ -1,6 +1,6 @@
 # PQC-CAM-Generator : Post-Quantum V2X Cooperative Awareness Messages
 
-**CamGen_PQC** is a research project that integrates **Post-Quantum Cryptography (PQC)** into **V2X (Vehicle-to-Everything)** communication security. It extends the standard ETSI ITS message generation and certificate infrastructure to support **CRYSTALS-Dilithium** digital signatures alongside classical ECDSA, providing a migration path toward quantum-resistant vehicular networks.
+This research project integrates **Post-Quantum Cryptography (PQC)** into **V2X (Vehicle-to-Everything)** communication security. It extends the standard ETSI ITS message generation and certificate infrastructure to support **CRYSTALS-Dilithium** digital signatures alongside classical ECDSA, providing a migration path toward quantum-resistant vehicular networks.
 
 Developed as a Master's thesis at *Politecnico di Torino* in collaboration with *Nardò Technical Center — Porsche Engineering*.
 
@@ -34,11 +34,11 @@ asn1c → liboqs → itscertgen → fsmsggen
 
 | Component | Role | Key Files |
 |-----------|------|-----------|
-| **fsmsggen** | Generates and injects secured V2X messages (CAM, DENM, PKI) onto Ethernet via PCAP. Toggles ECDSA/Dilithium via `flag_PQC`. | `fsmsggen.c`, `extensions.c/h`, `msggen_cam.c`, `load_data.c` |
-| **itscertgen** | Generates ETSI TS 103 097 certificates (OER format) with both ECDSA and Dilithium keypairs. | `certgen.c`, `keygen.c`, `asncodec/DilithiumKey.c/h`, `asncodec/DilithiumSignature.c/h` |
+| **[fsmsggen](https://github.com/fillabs/fsmsggen.git)** | Generates and injects secured V2X messages (CAM, DENM, PKI) onto Ethernet via PCAP. Toggles ECDSA/Dilithium via `flag_PQC`. | `fsmsggen.c`, `extensions.c/h`, `msggen_cam.c`, `load_data.c` |
+| **[itscertgen](https://forge.etsi.org/rep/ITS/itscertgen.git)** | Generates ETSI TS 103 097 certificates (OER format) with both ECDSA and Dilithium keypairs. | `certgen.c`, `keygen.c`, `asncodec/DilithiumKey.c/h`, `asncodec/DilithiumSignature.c/h` |
 | **benchmark** | Standalone ECDSA vs Dilithium/Falcon/SPHINCS+ benchmark (2000 rounds each). | `benchmark.c` |
-| **liboqs** | Open Quantum Safe library providing PQC algorithm implementations. Pre-built for Dilithium-2. | `build/lib/liboqs.a`, `build/include/oqs/` |
-| **asn1c** | FilLabs fork of the ASN.1-to-C compiler. Generates codec for `DilithiumKey`, `DilithiumSignature`, and ITS message types. | Pre-built in-tree |
+| **[liboqs](https://github.com/open-quantum-safe/liboqs.git)** | Open Quantum Safe library providing PQC algorithm implementations. Pre-built for Dilithium-2. | `build/lib/liboqs.a`, `build/include/oqs/` |
+| **[asn1c](https://github.com/fillabs/asn1c.git)** | FilLabs fork of the ASN.1-to-C compiler. Generates codec for `DilithiumKey`, `DilithiumSignature`, and ITS message types. | Pre-built in-tree |
 | **TS.ITS** | ETSI ITS test suite — provides certificate profiles (`.xer` templates). | `data/profiles/` |
  
 ### PQC Integration Points
