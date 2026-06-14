@@ -39,7 +39,7 @@ asn1c → liboqs → itscertgen → fsmsggen
 | **benchmark** | Standalone ECDSA vs Dilithium/Falcon/SPHINCS+ benchmark (2000 rounds each). | `benchmark.c` |
 | **[liboqs](https://github.com/open-quantum-safe/liboqs.git)** | Open Quantum Safe library providing PQC algorithm implementations. Pre-built for Dilithium-2. | `build/lib/liboqs.a`, `build/include/oqs/` |
 | **[asn1c](https://github.com/fillabs/asn1c.git)** | FilLabs fork of the ASN.1-to-C compiler. Generates codec for `DilithiumKey`, `DilithiumSignature`, and ITS message types. | Pre-built in-tree |
-| **TS.ITS** | ETSI ITS test suite — provides certificate profiles (`.xer` templates). | `data/profiles/` |
+| **[TS.ITS](https://forge.etsi.org/rep/ITS/TS.ITS.git)** | ETSI ITS test suite — provides certificate profiles (`.xer` templates). | `data/profiles/` |
  
 ### PQC Integration Points
 
